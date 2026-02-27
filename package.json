@@ -1,0 +1,45 @@
+{
+  "name": "@stack0/mcp",
+  "version": "0.1.0",
+  "description": "Stack0 MCP server — give AI agents access to Stack0 APIs (mail, CDN, screenshots, extraction, workflows, integrations, video, memory)",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "stack0-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "stack0",
+    "ai",
+    "model-context-protocol",
+    "email",
+    "cdn",
+    "screenshots",
+    "extraction",
+    "workflows",
+    "integrations"
+  ],
+  "author": "Stack0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stack0dev/mcp.git"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.11.5",
+    "@stack0/sdk": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.2",
+    "tsup": "^8.4.0",
+    "typescript": "^5.7.3"
+  }
+}
