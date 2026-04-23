@@ -3,6 +3,9 @@ import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js"
 import { Stack0 } from "@stack0/sdk";
 import { registerScreenshotTools } from "./tools/screenshots.js";
 import { registerExtractionTools } from "./tools/extraction.js";
+import { registerCrawlTools } from "./tools/crawl.js";
+import { registerMapTools } from "./tools/map.js";
+import { registerDocumentTools } from "./tools/documents.js";
 import { registerCdnTools } from "./tools/cdn.js";
 import { registerMailTools } from "./tools/mail.js";
 import { registerIntegrationTools } from "./tools/integrations.js";
@@ -29,6 +32,9 @@ const server = new McpServer({
 
 registerScreenshotTools(server, stack0);
 registerExtractionTools(server, stack0);
+registerCrawlTools(server, stack0);
+registerMapTools(server, stack0);
+registerDocumentTools(server, stack0);
 registerCdnTools(server, stack0);
 registerMailTools(server, stack0);
 registerIntegrationTools(server, stack0);
