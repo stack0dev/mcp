@@ -9,10 +9,9 @@ import { registerDocumentTools } from "./tools/documents.js";
 import { registerCdnTools } from "./tools/cdn.js";
 import { registerMailTools } from "./tools/mail.js";
 import { registerIntegrationTools } from "./tools/integrations.js";
-// TODO: uncomment when @stack0/sdk publishes workflows + memory modules
+// TODO: uncomment when @stack0/sdk publishes workflows module
 // import { registerWorkflowTools } from "./tools/workflows.js";
 import { registerVideoTools } from "./tools/video.js";
-// import { registerMemoryTools } from "./tools/memory.js";
 
 const apiKey = process.env.STACK0_API_KEY;
 if (!apiKey) {
@@ -40,7 +39,6 @@ registerMailTools(server, stack0);
 registerIntegrationTools(server, stack0);
 // registerWorkflowTools(server, stack0);
 registerVideoTools(server, stack0);
-// registerMemoryTools(server, stack0);
 
 async function main() {
   const transport = new StdioServerTransport();
